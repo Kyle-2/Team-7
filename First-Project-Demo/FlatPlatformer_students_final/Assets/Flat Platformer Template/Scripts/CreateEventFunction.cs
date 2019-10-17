@@ -11,4 +11,17 @@ public class CreateEventFunction : MonoBehaviour
 {
     public GameObject ObjectToMake;
 
+
+    //function can be run to create given object
+    public void CreateObject()
+    {
+        Instantiate(ObjectToMake, transform.position, transform.rotation);
+    }
+
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Instantiate(ObjectToMake, transform.position, transform.rotation);
+    }
 }
